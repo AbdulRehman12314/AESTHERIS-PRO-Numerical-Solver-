@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AESTHERIS PRO | AI Physics Intelligence</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="scanline"></div>
+
+    <div class="app-container">
+        
+        <header class="pro-header">
+            <div class="header-inner">
+                
+                <div class="logo-container">
+                    <img src="Gemini_Generated_Image_22jgs622jgs622jg.png" alt="AESTHERIS PRO">
+                    <span class="logo-pro-badge">PRO</span>
+                </div>
+
+                <div class="header-center">
+                    <h1 class="welcome-title">UNIVERSAL AI ENGINE</h1>
+                    <p class="welcome-tagline">SOLVE AT THE SPEED OF LIGHT</p>
+                </div>
+
+                <div class="header-actions">
+                    <div class="system-time" id="clock">00:00:00</div>
+                    <button class="voice-btn" onclick="startVoice()">🎤 ACTIVATE JARVIS</button>
+                </div>
+
+            </div>
+        </header>
+
+        <main>
+            
+            <section class="panel control-panel">
+                <div class="search-wrapper">
+                    <label>NEXUS SEARCH</label>
+                    <input type="text" id="smartSearch" placeholder="Search module (e.g. Force)..." onkeyup="filterOptions()">
+                </div>
+
+                <div class="module-group">
+                    <label>ENGINE MODULE</label>
+                    <select id="serviceId" onchange="updateUI()">
+                        <option value="0">Select a module to proceed further</option>
+                        <optgroup label="KINEMATICS">
+                            <option value="1">01. Speed (v=s/t)</option>
+                            <option value="2">02. Velocity (v=Δx/t)</option>
+                            <option value="3">03. Acceleration (a=Δv/t)</option>
+                            <option value="4">04. 1st Eq of Motion (vf=vi+at)</option>
+                            <option value="5">05. 2nd Eq of Motion (S=vit+½at²)</option>
+                            <option value="6">06. 3rd Eq of Motion (vf²-vi²=2aS)</option>
+                            <option value="7">07. Average Speed (v_avg=d/t)</option>
+                            <option value="8">08. Average Velocity (v_avg=x/t)</option>
+                        </optgroup>
+                        <optgroup label="DYNAMICS & FORCE">
+                            <option value="9">09. Force (F=ma)</option>
+                            <option value="10">10. Weight (W=mg)</option>
+                            <option value="11">11. Momentum (P=mv)</option>
+                            <option value="12">12. Force-Momentum (F=Δp/t)</option>
+                            <option value="13">13. Centripetal Force (Fc=mv²/r)</option>
+                            <option value="14">14. Friction (fs=μs·N)</option>
+                            <option value="15">15. Torque (τ=Fd)</option>
+                            <option value="16">16. Magnetic Field (F=qvB)</option>
+                        </optgroup>
+                        <optgroup label="ENERGY & ORBITS">
+                            <option value="17">17. Orbital Velocity (v=√(GM/r))</option>
+                            <option value="18">18. Work Done (W=Fd)</option>
+                            <option value="19">19. Kinetic Energy (KE=½mv²)</option>
+                            <option value="20">20. Potential Energy (PE=mgh)</option>
+                        </optgroup>
+                        <optgroup label="MATTER & FLUIDS">
+                            <option value="21">21. Efficiency (%=Eout/Ein×100)</option>
+                            <option value="22">22. Power (P=W/t)</option>
+                            <option value="23">23. Density (ρ=m/V)</option>
+                            <option value="24">24. Pressure (P=F/A)</option>
+                            <option value="25">25. Liquid Pressure (P=ρgh)</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <div id="inputArea" class="input-container"></div>
+
+                <button class="main-solve-btn" onclick="processCalculation()">
+                    RUN CALCULATION ENGINE
+                </button>
+            </section>
+
+            <section class="panel output-panel">
+                
+                <div id="welcomeOverlay" class="overlay">
+                    <div class="atom-loader"></div>
+                    <h2 style="font-family: 'Orbitron'; letter-spacing: 2px; color: var(--neon); font-size: 1.1rem; margin-bottom: 6px;">AWAITING COMMAND</h2>
+                    <p style="color: #888; font-size: 0.85rem; margin: 0;">Select a module, enter parameters, and leave exactly one box blank to solve.</p>
+                </div>
+
+                <div id="resultContent" style="display: none;"></div>
+
+            </section>
+
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
